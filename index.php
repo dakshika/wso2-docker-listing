@@ -72,7 +72,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('.block-no-bulet').html('');
+        $('.block-no-bulet').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>');
         var text = '';
         $.getJSON( "listing.json", function( data ) {
            var repositories = data.repositories;
@@ -95,7 +95,8 @@
                         '</a>' +
                         '</li>';
             }
-        $('.block-no-bulet').append(text);
+            $('.block-no-bulet').html('');
+            $('.block-no-bulet').append(text);
         });
 
 

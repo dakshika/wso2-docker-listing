@@ -103,3 +103,6 @@ li.block-main{
     margin-left: .4rem;
     font-size: 1.7rem;
 }
+.block-no-bulet i{
+    color: #fff;
+}

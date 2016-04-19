@@ -77,7 +77,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('.block-no-bulet').html('');
+        $('.block-no-bulet').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>');
         var getTagName = GetURLParameter('repo');
         var text = '';
         $.getJSON( "tags.json?repo="+getTagName, function( data ) {
