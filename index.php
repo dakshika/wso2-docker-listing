@@ -36,6 +36,14 @@
                 <h1 class="display-block-xs">WSO2 Docker Repositories</h1>
             </a>
         </div>
+        <div class="pull-right brand col-md-5">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for..." id="search">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search!</button>
+                  </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
     </div>
 </header>
 
@@ -91,6 +99,31 @@
 
     });
 
+    $("#search").on("keyup paste", function() {
+        var value = $(this).val().toUpperCase();
+        var $rows = $(".block-main");
+
+        if(value === ''){
+            $rows.fadeIn(300);
+            return false;
+        }
+
+        $rows.each(function(index) {
+            if (index !== 1) {
+
+                $row = $(this);
+
+                var column1 = $row.find(".block-title-one").html().toUpperCase();
+
+                if (column1.indexOf(value) > -1) {
+                    $row.fadeIn(300);
+                }
+                else {
+                    $row.fadeOut(300);
+                }
+            }
+        });
+    });
 </script>
 </body>
 </html>
