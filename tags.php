@@ -44,7 +44,7 @@
     <div class="starter-template">
         <h1>Repository name: <?php echo $_GET['repo']; ?></h1>
         <p class="lead">
-            <pre>docker pull http://dockerhub.private.wso2.com/<?php echo $_GET['repo']; ?></pre>
+            <pre>docker pull dockerhub.private.wso2.com/<?php echo $_GET['repo']; ?></pre>
         </p>
     </div>
     <div class="row starter-template">
@@ -77,7 +77,7 @@
         $.getJSON( "tags.json?repo="+getTagName, function( data ) {
             var repositories = data.tags;
             for (i = 0; i < repositories.length; i++) {
-            text += '<tr><td>'+repositories[i]+'</td></tr>';
+            text += '<tr><td>dockerhub.private.wso2.com/'+getTagName + ':<strong>'+repositories[i]+'</strong></td></tr>';
             }
             $('.tag-container').append(text);
         });
