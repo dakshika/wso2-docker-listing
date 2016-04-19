@@ -132,3 +132,11 @@ header .brand h1 {
     font-weight: 300;
     color: #fff;
 }
+
+pre{
+    font-size: 15px;
+}
+
+table{
+    width: 98%;
+}

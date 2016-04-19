@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Official Docker Repositories</title>
+    <title>WSO2 Official Docker Repositories</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,8 +42,7 @@
 <div class="container">
 
     <div class="starter-template">
-        <h1>Official Repositories</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>Explore Repositories</h1>
     </div>
     <div class="row select-blocks">
         <ul class="block-no-bulet col-md-12">
@@ -74,11 +73,11 @@
                         '<div class="block-title" >' +
                         '<div class="block-labels" >' +
                         '<div class="block-title-one" >'+repositories[i]+'</div>' +
-                        '<span class="block-title-two" >official</span>' +
+                        '<span class="block-title-two" ></span>' +
                         '</div></div></div>' +
-                        '<div class="block-two block-general" >' +
-                        '<div class="" ><div class="" >2.7K</div><div class="" >STARS</div></div></div>' +
-                        '<div class="block-three block-general" ><div class="" ><div class="" >10M+</div><div class="" >PULLS</div>' +
+                       // '<div class="block-two block-general" >' +
+                       // '<div class="" ><div class="" >2.7K</div><div class="" >STARS</div></div></div>' +
+                       // '<div class="block-three block-general" ><div class="" ><div class="" >10M+</div><div class="" >PULLS</div>' +
                         '</div></div>' +
                         '<div class="block-four block-general" ><i class="fa fa-chevron-right fa-lg" ></i><div class="text">DETAILS</div>' +
                         '</div>' +

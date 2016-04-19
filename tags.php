@@ -43,9 +43,11 @@
 
     <div class="starter-template">
         <h1>Repository name: <?php echo $_GET['repo']; ?></h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <p class="lead">
+            <pre>docker pull http://dockerhub.private.wso2.com/<?php echo $_GET['repo']; ?></pre>
+        </p>
     </div>
-    <div class="row">
+    <div class="row starter-template">
         <table class="table table-striped">
            <thead>
                <tr>
