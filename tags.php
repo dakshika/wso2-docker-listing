@@ -50,7 +50,7 @@
 <div class="container">
 
     <div class="starter-template">
-        <h1>Repository name: XXX</h1>
+        <h1>Repository name: <?php echo $_GET['repo']; ?></h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
     </div>
     <div class="row">
@@ -78,7 +78,7 @@
 <script>
     $(document).ready(function() {
         $('.block-no-bulet').html('<i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>');
-        var getTagName = GetURLParameter('repo');
+        var getTagName = getParameterByName('repo');
         var text = '';
         $.getJSON( "tags.json?repo="+getTagName, function( data ) {
             var repositories = data.tags;
@@ -92,19 +92,15 @@
     });
 
 
-    function GetURLParameter(sParam)
-    {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++)
-        {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam)
-            {
-                return sParameterName[1];
-            }
-        }
-    }​
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)", "i"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
 
 </script>
 </body>
